@@ -24,7 +24,7 @@ void login::on_pushButton_clicked()
     password=ui->lineEdit_password->text();
     username=ui->lineEdit_nom->text();
     QSqlQuery qry;
-      if(qry.exec("select * from users where username ='"+username+"' and password='"+password+"'" ))
+      if(qry.exec("select * from users where id ='"+username+"' and password='"+password+"'" ))
       {
 
           while(qry.next()){

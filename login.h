@@ -25,7 +25,7 @@ public:
     void connOpen()
     {
         mydb = QSqlDatabase::addDatabase("QSQLITE");
-       mydb.setDatabaseName("/home/mouhameden/Desktop/qtsqlite.db");
+       mydb.setDatabaseName("C:/sqlite3/usersdb.db");
        if(!mydb.open())
           qDebug()<<("Failed to open database");
        else
