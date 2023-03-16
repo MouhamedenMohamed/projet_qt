@@ -12,9 +12,12 @@ CONFIG += c++17
 SOURCES += \
     adminadduser.cpp \
     admininterface.cpp \
+    bdd_mainpage.cpp \
+    init.cpp \
     main.cpp \
     mainwindow.cpp \
     profil.cpp \
+    tables_mainpage.cpp \
     userinterface.cpp \
     usersmanagement.cpp
 
@@ -22,8 +25,11 @@ SOURCES += \
 HEADERS += \
     adminadduser.h \
     admininterface.h \
+    bdd_mainpage.h \
+    init.h \
     mainwindow.h \
     profil.h \
+    tables_mainpage.h \
     userinterface.h \
     usersmanagement.h
 
@@ -31,8 +37,11 @@ HEADERS += \
 FORMS += \
     adminadduser.ui \
     admininterface.ui \
+    bdd_mainpage.ui \
+    init.ui \
     mainwindow.ui \
     profil.ui \
+    tables_mainpage.ui \
     userinterface.ui \
     usersmanagement.ui
 

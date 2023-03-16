@@ -1,10 +1,9 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include <firstpage.h>
-#include <inscrire.h>
-#include<login.h>
-
-#include<adminboard.h>
+#include "./ui_mainwindow.h"
+#include "QMessageBox"
+#include "userinterface.h"
+#include<init.h>
+//#include <QDebug.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -12,58 +11,67 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-     login log;
-     log.connOpen();
+
+
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    mydb.close();
 }
+
+/**
+ * @brief MainWindow::on_pushButton_login_clicked
+ */
+//void MainWindow::on_pushButton_login_clicked()
+//{
+//    MainWindow main;
+//    main.connect();
+//    //On recupere les données de connexion saisies par l'utilisateur
+//    QString username=ui->lineEdit_username->text();
+//    QString password=ui->lineEdit_password->text();
+//    QSqlQuery query;
+
+//    //Si admin
+//    if(username=="admin" && password=="password"){
+//        QMessageBox::information(this, "Login Admin succeed","Id and password correct");
+//        adminInterface=new AdminInterface(this);
+//        hide();
+//        adminInterface->show();
+
+//    }else{
+
+//        //Autres utilisateurs simples existant dans la base de données users
+//        if(!mydb.isOpen()) {
+//            qDebug()<<"Database not opened..";
+//            return;
+//        }
+//        query.prepare("select *from users where username=:username AND password=:password");
+//        query.bindValue(":username", username);
+//        query.bindValue(":password", password);
+
+//        if (!query.exec() || !query.next()) {
+//            qWarning() << "Nom d'utilisateur ou mot de passe incorrect";
+//            QMessageBox::warning(this, "Login failed","Id or password are not correct");
+
+//        }else{
+//            QMessageBox::information(this, "Login user succeed","Id and password correct");
+//            hide();
+//            userInterface=new UserInterface(this);
+//            userInterface->show();
+//        }
+
+//    }
+
+//}
 
 
 void MainWindow::on_pushButton_clicked()
 {
-  QString username,password;
-  int count=0;
-
-  if(!mydb.isOpen()){
-      qDebug()<<"Faild";
-      return ;
-  }
-
-
-
-
-
-}
-
-
-void MainWindow::on_pushButton_2_clicked()
-{
-//    firstpage fp;
-//    fp.setModal(true);
-//    fp.exec();
-
-    inscrire ins;
-    ins.setModal(true);
-    ins.exec();
-
-}
-
-
-void MainWindow::on_pushButton_3_clicked()
-{
-    login log;
-    log.setModal(true);
-    log.exec();
-}
-
-
-void MainWindow::on_pushButton_4_clicked()
-{
-    adminboard admin;
-    admin.setModal(true);
-    admin.exec();
+    init init;
+    init.setModal(true);
+    init.exec();
 }
 
