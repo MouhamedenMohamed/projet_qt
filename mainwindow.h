@@ -21,7 +21,8 @@ public:
 
         if(!mydb.isOpen()){
             mydb=QSqlDatabase::addDatabase("QSQLITE");
-            mydb.setDatabaseName("/home/mouhameden/Documents/PolytechTours/S8/C++/BDDs/init.db");
+            //mydb.setDatabaseName("/home/mouhameden/Documents/PolytechTours/S8/C++/BDDs/init.db");
+            mydb.setDatabaseName("C:/sqlite3/mydb.db");
             mydb.open();
            if(mydb.isOpen()){
                 qDebug()<<"connected to database init";

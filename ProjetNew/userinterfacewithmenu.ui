@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserInterfaceWithMenu</class>
+ <widget class="QMainWindow" name="UserInterfaceWithMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>390</y>
+      <width>371</width>
+      <height>91</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>741</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QListView" name="listView_DB"/>
+    <widget class="QTableView" name="tableView_DB"/>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ListeBD">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Liste BD</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>622</x>
+      <y>40</y>
+      <width>121</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Affichage table</string>
+    </property>
+   </widget>
+   <widget class="QDialogButtonBox" name="buttonBox">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>490</y>
+      <width>193</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="standardButtons">
+     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>172</x>
+      <y>400</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tapez vos réquêtes ici</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAjouter_une_nouvelle_BD">
+    <property name="title">
+     <string>Ajouter une nouvelle BD</string>
+    </property>
+    <addaction name="actionAjouter_une_nouvelle_BD"/>
+    <addaction name="actionCr_er_une_nouvelle_BD"/>
+   </widget>
+   <widget class="QMenu" name="menuAjouter_un_profil">
+    <property name="title">
+     <string>Ajouter un profil</string>
+    </property>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuAjouter_une_nouvelle_BD"/>
+   <addaction name="menuAjouter_un_profil"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionRien">
+   <property name="text">
+    <string>Rien</string>
+   </property>
+  </action>
+  <action name="actionAjouter_une_nouvelle_BD">
+   <property name="text">
+    <string>Ajouter une nouvelle BD</string>
+   </property>
+  </action>
+  <action name="actionCr_er_une_nouvelle_BD">
+   <property name="text">
+    <string>Créer une nouvelle BD</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
